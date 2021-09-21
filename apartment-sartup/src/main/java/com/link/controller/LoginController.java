@@ -14,7 +14,7 @@ public class LoginController implements LoginRemote {
                         @RequestParam("password") String password,
                         Model model){
         if (!StringUtils.isEmpty(username)&&"123456".equals(password)){
-            return "web/dashboard";
+            return "web/apartment";
         }else{
             model.addAttribute("msg","用户名或密码错误");
             return "web/index";

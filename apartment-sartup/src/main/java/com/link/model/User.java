@@ -1,5 +1,8 @@
 package com.link.model;
 
+import javax.persistence.Table;
+
+@Table(name="admit test")
 public class User {
         private Long id;
         private String username;

@@ -13,7 +13,7 @@
 	</head>
 
 	<body class="text-center">
-		<form class="form-signin" th:action="@{/user/login}">
+		<form class="form-signin" th:action="@{user.do/login}">
 			<img class="mb-4" th:src="@{/img/bootstrap-solid.svg}" alt="" width="72" height="72">
 			<h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
 			<input type="text" name="username" class="form-control" th:placeholder="#{login.username}" required="" autofocus="">

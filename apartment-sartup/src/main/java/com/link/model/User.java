@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-@Table(name="apartment")
+@Table(name="user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,17 +17,6 @@ public class User {
         private String name;
     @Column(name = "password", nullable = true, length = 30)
         private String password;
-
-
-
-        @Override
-        public String toString() {
-            return "User{" +
-                    "id=" + id +
-                    ", username='" + name + '\'' +
-                    ", password='" + password + '\'' +
-                    '}';
-        }
     }
 
 

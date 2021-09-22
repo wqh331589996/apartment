@@ -1,44 +1,30 @@
 package com.link.model;
 
-import javax.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
-@Table(name="admit test")
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
+@Table(name="apartment")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
         private Long id;
-        private String username;
+    @Column(name = "name", nullable = true, length = 30)
+        private String name;
+    @Column(name = "password", nullable = true, length = 30)
         private String password;
 
-
-        public Long getId() {
-            return id;
-        }
-
-        public void setId(Long id) {
-            this.id = id;
-        }
-
-        public String getUsername() {
-            return username;
-        }
-
-        public void setUsername(String username) {
-            this.username = username;
-        }
-
-        public String getPassword() {
-            return password;
-        }
-
-        public void setPassword(String password) {
-            this.password = password;
-        }
 
 
         @Override
         public String toString() {
             return "User{" +
                     "id=" + id +
-                    ", username='" + username + '\'' +
+                    ", username='" + name + '\'' +
                     ", password='" + password + '\'' +
                     '}';
         }
